@@ -15,7 +15,17 @@ class CreateSmartphonesTable extends Migration
     {
         Schema::create('smartphones', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('brand_id');
+            $table->string('name');
+            $table->date('release_date');
+            $table->string('size');
+            $table->string('weight');
+            $table->float('screen_size');
+            $table->string('processor');
+            $table->string('image');
             $table->timestamps();
+
+            $table->foreign('brand_id')->references('id')->on('brands');
         });
     }
 

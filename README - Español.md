@@ -1,25 +1,25 @@
 # Test API - [César Gil Lao](https://github.com/cesargillao)
 
-This API provides CRUD operation of Brands and Smartphones as well as a recursive and optimal list of related data.
+Esta API proporciona el funcionamiento CRUD de marcas y teléfonos inteligentes, así como una lista recursiva y óptima de datos relacionados.
 
-## Installation
+## Instalación
 
-1. Clone the repository.
-2. Install the dependencies:
+1. Clonar el repositorio.
+2. Instalar las dependencias:
 
 ```cmd
    $ composer install
 ```
 
-3. Create the database **test_api**
+3. Crear la base de datos **test_api**
 
-4. Run the migrations:
+4. Ejecutar las migraciones:
 
 ```cmd
    $ php artisan migrate --seed
 ```
 
-5. Run unit tests (TDD):
+5. Ejecutar pruebas unitarias (TDD):
 
 ```cmd
    $ ./vendor/bin/phpunit --filter BrandsTest
@@ -27,23 +27,23 @@ This API provides CRUD operation of Brands and Smartphones as well as a recursiv
    $ ./vendor/bin/phpunit --filter DataTest
 ```
 
-6. With step 5 the data was modified. Run the migrations again:
+6. Con el paso 5 se modificaron los datos. Ejecutar las migraciones nuevamente:
 
 ```cmd
    $ php artisan migrate:fresh --seed
 ```
 
-7. Initialize the server:
+7. Inicializar el servidor:
 
 ```cmd
    $ php artisan serve --host localhost
 ```
 
-## Interface
+## Interfáz
 
-In the Postman tool you can import the route collection with the file **_ TestAPI.postman_collection.json _** located in the root of the project.
+En la herramienta Postman puedes importar la colección de rutas con el archivo **_TestAPI.postman_collection.json_** ubicado en la raíz del proyecto.
 
-## Routes available for this API
+## Rutas disponibles para esta API
 
 | Method    | URI                              | Name               | Action                                            | Middleware |
 |-----------|----------------------------------|--------------------|---------------------------------------------------|------------|

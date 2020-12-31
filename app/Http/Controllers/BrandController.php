@@ -14,17 +14,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return Brand::all();
     }
 
     /**
@@ -35,7 +25,20 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'corp_name' => 'required',
+            'fundators' => 'required',
+            'fundation_date' => 'required|date',
+            'campus' => 'required',
+            'website' => 'required',
+            'logo' => 'required',
+        ]);
+
+        // If validation fails, return with an error in this point
+
+        // Else, returns created item
+        return Brand::create($data);
     }
 
     /**
@@ -46,7 +49,7 @@ class BrandController extends Controller
      */
     public function show(Brand $brand)
     {
-        //
+        return $brand;
     }
 
     /**
@@ -57,7 +60,7 @@ class BrandController extends Controller
      */
     public function edit(Brand $brand)
     {
-        //
+        return $brand;
     }
 
     /**
@@ -69,7 +72,19 @@ class BrandController extends Controller
      */
     public function update(Request $request, Brand $brand)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'corp_name' => 'required',
+            'fundators' => 'required',
+            'fundation_date' => 'required|date',
+            'campus' => 'required',
+            'website' => 'required',
+            'logo' => 'required',
+        ]);
+
+        $brand->update($data);
+        
+        return Brand::find($brand->id);
     }
 
     /**
@@ -80,6 +95,6 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand)
     {
-        //
+        $brand->delete();
     }
 }

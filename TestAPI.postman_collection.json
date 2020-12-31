@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "2965cc1a-570e-477e-b98a-781f0ab9562e",
+		"name": "Test API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a Brand",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "New Brand",
+							"type": "text"
+						},
+						{
+							"key": "corp_name",
+							"value": "New Brand Inc.",
+							"type": "text"
+						},
+						{
+							"key": "fundators",
+							"value": "Me",
+							"type": "text"
+						},
+						{
+							"key": "fundation_date",
+							"value": "2020-12-31",
+							"type": "text"
+						},
+						{
+							"key": "campus",
+							"value": "Here",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "https://www.google.com",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"value": "mylogo.png",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/brand",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Brand",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "New Brand",
+							"type": "text"
+						},
+						{
+							"key": "corp_name",
+							"value": "New Brand Inc.",
+							"type": "text"
+						},
+						{
+							"key": "fundators",
+							"value": "Me",
+							"type": "text"
+						},
+						{
+							"key": "fundation_date",
+							"value": "2020-12-31",
+							"type": "text"
+						},
+						{
+							"key": "campus",
+							"value": "Here",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "https://www.google.com",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"value": "mylogo.png",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/brand/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brand",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Brands List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/brand",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Specific Brand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/brand/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brand",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Brand",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/brand/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brand",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Specific Brand To Edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/brand/1/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"brand",
+						"1",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Smartphone",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "brand_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Xiaomi Poco X3",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2020-09-01",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "76.8 x 165.3 x 9.4 (mm)",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "215 g",
+							"type": "text"
+						},
+						{
+							"key": "screen_size",
+							"value": "6.67",
+							"type": "text"
+						},
+						{
+							"key": "processor",
+							"value": "Qualcomm Snapdragon 732G",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "https://cdn-files.kimovil.com/devicerender/0005/21/thumb_420765_devicerender_small.jpeg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/smartphone",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"smartphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Smartphone",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "brand_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Xiaomi Poco X3",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2020-09-01",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "76.8 x 165.3 x 9.4 (mm)",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "215 g",
+							"type": "text"
+						},
+						{
+							"key": "screen_size",
+							"value": "6.67",
+							"type": "text"
+						},
+						{
+							"key": "processor",
+							"value": "Qualcomm Snapdragon 732G",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "https://cdn-files.kimovil.com/devicerender/0005/21/thumb_420765_devicerender_small.jpeg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/smartphone/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"smartphone",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Smartphones List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/smartphone",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"smartphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Specific Smartphone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/smartphone/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"smartphone",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Smartphone",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/smartphone/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"smartphone",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Specific Smartphone To Edit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/smartphone/1/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"smartphone",
+						"1",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show A Recursive Asociation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/data/recursive",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"data",
+						"recursive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Optimal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/data/optimal",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"data",
+						"optimal"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
